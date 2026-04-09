@@ -5,12 +5,9 @@ services:
     image: 'mariadb:10.4.34'
     environment:
       MARIADB_ALLOW_EMPTY_ROOT_PASSWORD: 'true'
-      POSTGRES_DB: 'zulip'
-      POSTGRES_USER: 'zulip'
     volumes:
       - './database:/var/lib/mysql'
- #   entrypoint: /bin/bash -c "for f in /run/secrets/*; do export $$(cut -d'_' -f2- <<< $$(basename $${f}))=\"$$(cat $${f})\"; done; docker-entrypoint.sh postgres;"
-      
+  
   backend:
     image: 'filippobosi/meal-project-backend:v0.1'
     depends_on:
