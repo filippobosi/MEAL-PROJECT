@@ -6,8 +6,8 @@ export default defineConfig({
   plugins: [vue()],
   server: {
     proxy: {
-      "/api": "http://localhost:3000",
-      "/img": "http://localhost:3000"
+      "/api": "http://backend:3000",
+      "/img": "http://backend:3000"
     }
   }
 })
