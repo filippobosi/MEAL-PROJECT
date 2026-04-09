@@ -1,7 +1,7 @@
 import mysql, { Connection } from 'mysql2'
 
 export const connection: Connection = mysql.createConnection({
-  host: 'localhost',
+  host: 'database',
   user: 'root',
   password: '',
   database: 'meal1'
